@@ -1,7 +1,9 @@
 import { Image, ScrollView, StyleSheet, Text, View } from "react-native"
 import Wrapper from "./Wrapper";
+import { useNavigation } from "@react-navigation/native";
 
 const TestGermany = () => {
+    const navigation=useNavigation()
     return (
         <>
             <Wrapper>
@@ -25,7 +27,7 @@ const TestGermany = () => {
                         səviyyəni öyrən
                     </Text>
                     <View style={styles.testButton}>
-                        <Text style={{ color: "white", fontSize: 14, fontWeight: "600", fontFamily: "Plus Jakarta Sans" }}>
+                        <Text onPress={()=>navigation.navigate("Test")} style={{ color: "white", fontSize: 14, fontWeight: "600", fontFamily: "Plus Jakarta Sans" }}>
                             Testə başla
                         </Text>
                     </View>

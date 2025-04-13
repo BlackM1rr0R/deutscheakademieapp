@@ -12,6 +12,8 @@ import HomeScreen from "./src/components/HomeScreen";
 import MainLayout from "./src/pages/MainLayout";
 import HomePage from "./src/pages/HomePage";
 import Header from "./src/components/Header";
+import TestPraktik from "./src/pages/TestPraktik";
+import PracticeQuiz from "./src/pages/PracticeQuiz";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -25,6 +27,8 @@ const App = () => {
         <Stack.Screen name="Course" component={Course} />
         <Stack.Screen name="About" component={About} />
         <Stack.Screen name="Contact" component={Contact} />
+        <Stack.Screen name="Test" component={TestPraktik} />
+        <Stack.Screen name="PracticeQuiz" component={PracticeQuiz} />
       </Stack.Navigator>
     </NavigationContainer>
   );

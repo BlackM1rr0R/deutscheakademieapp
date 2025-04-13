@@ -1,0 +1,188 @@
+{
+    A1: [
+      {
+        id: 1,
+        question: "Wie heißt du?",
+        options: ["Ich heiße Ali.", "Ich bin 20 Jahre alt.", "Ich wohne in Berlin.", "Mir geht es gut."],
+        correct: "Ich heiße Ali."
+      },
+      {
+        id: 2,
+        question: "Wo wohnst du?",
+        options: ["Ich wohne in München.", "Ich bin Lehrer.", "Ich spreche Deutsch.", "Ich heiße Maria."],
+        correct: "Ich wohne in München."
+      },
+      {
+        id: 3,
+        question: "Was ist das?",
+        options: ["Ein Buch.", "Ich bin Student.", "Ich komme aus Spanien.", "Ich habe Hunger."],
+        correct: "Ein Buch."
+      },
+      {
+        id: 4,
+        question: "Wie alt bist du?",
+        options: ["Ich bin 25 Jahre alt.", "Ich wohne in Köln.", "Ich heiße Max.", "Ich arbeite als Koch."],
+        correct: "Ich bin 25 Jahre alt."
+      },
+      {
+        id: 5,
+        question: "Welche Farbe hat der Himmel?",
+        options: ["Blau.", "Hund.", "Zwei.", "Groß."],
+        correct: "Blau."
+      },
+    ],
+    A2: [
+      {
+        id: 1,
+        question: "Was machst du am Wochenende?",
+        options: ["Ich treffe Freunde.", "Ich habe eine Schwester.", "Ich bin Lehrer.", "Ich heiße Anna."],
+        correct: "Ich treffe Freunde."
+      },
+      {
+        id: 2,
+        question: "Wie kommst du zur Arbeit?",
+        options: ["Mit dem Bus.", "Ich heiße Paul.", "Ich bin 30 Jahre alt.", "In Berlin."],
+        correct: "Mit dem Bus."
+      },
+      {
+        id: 3,
+        question: "Was isst du zum Frühstück?",
+        options: ["Brötchen und Käse.", "Ich wohne in Leipzig.", "Ich spreche Französisch.", "Ich bin müde."],
+        correct: "Brötchen und Käse."
+      },
+      {
+        id: 4,
+        question: "Wie oft gehst du ins Kino?",
+        options: ["Einmal pro Monat.", "Ich arbeite im Krankenhaus.", "Ich bin Studentin.", "Ich habe ein Fahrrad."],
+        correct: "Einmal pro Monat."
+      },
+      {
+        id: 5,
+        question: "Was ist dein Lieblingsfilm?",
+        options: ["Inception.", "Sommer.", "Tennis.", "Apfel."],
+        correct: "Inception."
+      }
+    ],
+    B1: [
+      {
+        id: 1,
+        question: "Warum lernst du Deutsch?",
+        options: ["Weil ich in Deutschland arbeiten möchte.", "Weil ich müde bin.", "Weil es regnet.", "Weil ich einen Hund habe."],
+        correct: "Weil ich in Deutschland arbeiten möchte."
+      },
+      {
+        id: 2,
+        question: "Was ist deine Meinung zu sozialen Medien?",
+        options: ["Sie haben Vor- und Nachteile.", "Ich bin müde.", "Ich gehe schwimmen.", "Ich esse Pizza."],
+        correct: "Sie haben Vor- und Nachteile."
+      },
+      {
+        id: 3,
+        question: "Wie sieht dein Tagesablauf aus?",
+        options: ["Ich stehe um 7 Uhr auf, dann frühstücke ich.", "Ich bin 25 Jahre alt.", "Ich wohne in Wien.", "Ich habe einen Bruder."],
+        correct: "Ich stehe um 7 Uhr auf, dann frühstücke ich."
+      },
+      {
+        id: 4,
+        question: "Was würdest du in deiner Stadt verbessern?",
+        options: ["Mehr Grünflächen und Fahrradwege.", "Ich heiße Lukas.", "Ich arbeite in einer Bank.", "Ich mag Hunde."],
+        correct: "Mehr Grünflächen und Fahrradwege."
+      },
+      {
+        id: 5,
+        question: "Was ist wichtiger: Geld oder Glück?",
+        options: ["Glück, weil es inneren Frieden bringt.", "Ich esse Suppe.", "Ich habe ein Auto.", "Ich bin Lehrer."],
+        correct: "Glück, weil es inneren Frieden bringt."
+      },
+    ],
+    B2: [
+      {
+        id: 1,
+        question: "Welche Rolle spielen Fremdsprachen im Berufsleben?",
+        options: ["Sie erleichtern die Kommunikation mit internationalen Partnern.", "Ich spreche Französisch.", "Ich bin Lehrer.", "Ich wohne in Deutschland."],
+        correct: "Sie erleichtern die Kommunikation mit internationalen Partnern."
+      },
+      {
+        id: 2,
+        question: "Wie beeinflusst Technologie unser Leben?",
+        options: ["Sie verändert unsere Arbeitsweise und Kommunikation.", "Ich habe einen Hund.", "Ich bin 40 Jahre alt.", "Ich esse Frühstück."],
+        correct: "Sie verändert unsere Arbeitsweise und Kommunikation."
+      },
+      {
+        id: 3,
+        question: "Was bedeutet Nachhaltigkeit für dich?",
+        options: ["Ressourcen schonen und bewusst leben.", "Ich gehe ins Kino.", "Ich bin Informatiker.", "Ich mag Pizza."],
+        correct: "Ressourcen schonen und bewusst leben."
+      },
+      {
+        id: 4,
+        question: "Wie kann man Stress im Alltag vermeiden?",
+        options: ["Durch Bewegung und gute Zeitplanung.", "Ich fahre Fahrrad.", "Ich esse gern.", "Ich habe Durst."],
+        correct: "Durch Bewegung und gute Zeitplanung."
+      },
+      {
+        id: 5,
+        question: "Was hältst du von Homeoffice?",
+        options: ["Es bietet Flexibilität, aber erfordert Disziplin.", "Ich spiele Klavier.", "Ich wohne in Basel.", "Ich bin 22 Jahre alt."],
+        correct: "Es bietet Flexibilität, aber erfordert Disziplin."
+      },
+    ],
+    C1: [
+      {
+        id: 1,
+        question: "Wie würdest du den Begriff ‚Globalisierung‘ definieren?",
+        options: [
+          "Ein weltweiter wirtschaftlicher, kultureller und politischer Verflechtungsprozess.",
+          "Ich trinke Kaffee.",
+          "Ich heiße Martin.",
+          "Ich fahre nach Hamburg."
+        ],
+        correct: "Ein weltweiter wirtschaftlicher, kultureller und politischer Verflechtungsprozess."
+      },
+      {
+        id: 2,
+        question: "Welche Auswirkungen hat der Klimawandel auf unsere Gesellschaft?",
+        options: [
+          "Er bedroht Lebensräume, beeinflusst das Wetter und fordert politische Maßnahmen.",
+          "Ich habe ein Buch gelesen.",
+          "Ich bin müde.",
+          "Ich wohne in Zürich."
+        ],
+        correct: "Er bedroht Lebensräume, beeinflusst das Wetter und fordert politische Maßnahmen."
+      },
+      {
+        id: 3,
+        question: "Wie könnte man die Integration von Migranten verbessern?",
+        options: [
+          "Durch Sprachkurse, Arbeitschancen und interkulturellen Austausch.",
+          "Ich esse Reis.",
+          "Ich spiele Gitarre.",
+          "Ich gehe ins Fitnessstudio."
+        ],
+        correct: "Durch Sprachkurse, Arbeitschancen und interkulturellen Austausch."
+      },
+      {
+        id: 4,
+        question: "Welche Vorteile und Nachteile hat die Digitalisierung der Bildung?",
+        options: [
+          "Flexibilität & Zugänglichkeit, aber soziale Isolation ist ein Risiko.",
+          "Ich habe einen Hund.",
+          "Ich wohne in Berlin.",
+          "Ich trinke Wasser."
+        ],
+        correct: "Flexibilität & Zugänglichkeit, aber soziale Isolation ist ein Risiko."
+      },
+      {
+        id: 5,
+        question: "Wie wichtig ist kulturelle Bildung in der heutigen Zeit?",
+        options: [
+          "Sie fördert Toleranz, Identität und kritisches Denken.",
+          "Ich fahre mit dem Bus.",
+          "Ich esse Nudeln.",
+          "Ich bin Lehrer."
+        ],
+        correct: "Sie fördert Toleranz, Identität und kritisches Denken."
+      }
+    ]
+  }
+  
