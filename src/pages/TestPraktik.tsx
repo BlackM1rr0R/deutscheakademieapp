@@ -1,4 +1,4 @@
-import { Text, View, TouchableOpacity, StyleSheet } from "react-native";
+import { Text, View, TouchableOpacity, StyleSheet, Image, ScrollView } from "react-native";
 import Header from "../components/Header";
 import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
@@ -8,14 +8,20 @@ type NavigationProp = StackNavigationProp<RootStackParamList>;
 
 const TestPraktik = () => {
     const navigation = useNavigation<NavigationProp>();
-
     const levels = ["A1", "A2", "B1", "B2", "C1"];
 
     return (
         <>
-            <Header />
-            <View style={styles.container}>
+            <ScrollView contentContainerStyle={styles.container}>
+                <Header />
+
+                <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
+                    <Image style={styles.leftArrowImage} source={require("../assets/leftarrow.png")} />
+                    <Text style={styles.leftBackText}>Geri</Text>
+                </TouchableOpacity>
+
                 <Text style={styles.title}>Səviyyəni seç</Text>
+
                 {levels.map((level) => (
                     <TouchableOpacity
                         key={level}
@@ -25,7 +31,7 @@ const TestPraktik = () => {
                         <Text style={styles.buttonText}>{level} səviyyə</Text>
                     </TouchableOpacity>
                 ))}
-            </View>
+            </ScrollView>
         </>
     );
 };
@@ -33,12 +39,14 @@ const TestPraktik = () => {
 const styles = StyleSheet.create({
     container: {
         padding: 20,
-        alignItems: "center",
+        backgroundColor: "#fff",
+        height: "100%",
     },
     title: {
-        fontSize: 20,
+        fontSize: 22,
         fontWeight: "700",
         marginBottom: 20,
+        color: "#524FD5",
     },
     button: {
         backgroundColor: "#524FD5",
@@ -47,11 +55,27 @@ const styles = StyleSheet.create({
         width: "80%",
         marginVertical: 8,
         alignItems: "center",
+        alignSelf: "center",
     },
     buttonText: {
         color: "white",
         fontSize: 16,
         fontWeight: "600",
+    },
+    backButton: {
+        flexDirection: "row",
+        alignItems: "center",
+        marginBottom: 20,
+    },
+    leftArrowImage: {
+        width: 16,
+        height: 16,
+    },
+    leftBackText: {
+        fontSize: 24,
+        fontWeight: "600",
+        color: "#524FD5",
+        marginLeft: 10,
     },
 });
 

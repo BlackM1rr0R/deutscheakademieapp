@@ -1,35 +1,602 @@
 {
     A1: [
       {
-        id: 1,
-        question: "Wie heißt du?",
-        options: ["Ich heiße Ali.", "Ich bin 20 Jahre alt.", "Ich wohne in Berlin.", "Mir geht es gut."],
-        correct: "Ich heiße Ali."
+        "id": 1,
+        "question": "Wie heißt du?",
+        "options": ["Ich heiße Ali.", "Ich bin 20 Jahre alt.", "Ich wohne in Berlin.", "Mir geht es gut."],
+        "correct": "Ich heiße Ali."
       },
       {
-        id: 2,
-        question: "Wo wohnst du?",
-        options: ["Ich wohne in München.", "Ich bin Lehrer.", "Ich spreche Deutsch.", "Ich heiße Maria."],
-        correct: "Ich wohne in München."
+        "id": 2,
+        "question": "Wo wohnst du?",
+        "options": ["Ich wohne in München.", "Ich bin Lehrer.", "Ich spreche Deutsch.", "Ich heiße Maria."],
+        "correct": "Ich wohne in München."
       },
       {
-        id: 3,
-        question: "Was ist das?",
-        options: ["Ein Buch.", "Ich bin Student.", "Ich komme aus Spanien.", "Ich habe Hunger."],
-        correct: "Ein Buch."
+        "id": 3,
+        "question": "Was ist das?",
+        "options": ["Ein Buch.", "Ich bin Student.", "Ich komme aus Spanien.", "Ich habe Hunger."],
+        "correct": "Ein Buch."
       },
       {
-        id: 4,
-        question: "Wie alt bist du?",
-        options: ["Ich bin 25 Jahre alt.", "Ich wohne in Köln.", "Ich heiße Max.", "Ich arbeite als Koch."],
-        correct: "Ich bin 25 Jahre alt."
+        "id": 4,
+        "question": "Wie alt bist du?",
+        "options": ["Ich bin 25 Jahre alt.", "Ich wohne in Köln.", "Ich heiße Max.", "Ich arbeite als Koch."],
+        "correct": "Ich bin 25 Jahre alt."
       },
       {
-        id: 5,
-        question: "Welche Farbe hat der Himmel?",
-        options: ["Blau.", "Hund.", "Zwei.", "Groß."],
-        correct: "Blau."
+        "id": 5,
+        "question": "Welche Farbe hat der Himmel?",
+        "options": ["Blau.", "Hund.", "Zwei.", "Groß."],
+        "correct": "Blau."
       },
+      {
+        "id": 6,
+        "question": "Wie geht es dir?",
+        "options": ["Gut, danke.", "Ich bin Lehrer.", "Ich wohne in Wien.", "Ich bin 30 Jahre alt."],
+        "correct": "Gut, danke."
+      },
+      {
+        "id": 7,
+        "question": "Woher kommst du?",
+        "options": ["Ich komme aus der Türkei.", "Ich heiße Anna.", "Ich bin Arzt.", "Ich habe Hunger."],
+        "correct": "Ich komme aus der Türkei."
+      },
+      {
+        "id": 8,
+        "question": "Was machst du gern?",
+        "options": ["Ich lese gern.", "Ich heiße Peter.", "Ich bin 40 Jahre alt.", "Ich wohne in Stuttgart."],
+        "correct": "Ich lese gern."
+      },
+      {
+        "id": 9,
+        "question": "Was trinkst du?",
+        "options": ["Ich trinke Wasser.", "Ich bin Student.", "Ich habe zwei Katzen.", "Ich wohne in Zürich."],
+        "correct": "Ich trinke Wasser."
+      },
+      {
+        "id": 10,
+        "question": "Was ist dein Hobby?",
+        "options": ["Fußball spielen.", "Ich heiße Tom.", "Ich bin aus Polen.", "Ich spreche Englisch."],
+        "correct": "Fußball spielen."
+      },
+      {
+        "id": 11,
+        "question": "Welche Sprache sprichst du?",
+        "options": ["Ich spreche Deutsch.", "Ich bin Lehrer.", "Ich heiße Laura.", "Ich wohne in Graz."],
+        "correct": "Ich spreche Deutsch."
+      },
+      {
+        "id": 12,
+        "question": "Was ist dein Beruf?",
+        "options": ["Ich bin Lehrer.", "Ich bin 50 Jahre alt.", "Ich habe einen Hund.", "Ich komme aus Italien."],
+        "correct": "Ich bin Lehrer."
+      },
+      {
+        "id": 13,
+        "question": "Wie ist das Wetter heute?",
+        "options": ["Es ist sonnig.", "Ich bin müde.", "Ich wohne in Bremen.", "Ich spiele Tennis."],
+        "correct": "Es ist sonnig."
+      },
+      {
+        "id": 14,
+        "question": "Was machst du am Wochenende?",
+        "options": ["Ich gehe spazieren.", "Ich heiße Clara.", "Ich bin Arzt.", "Ich habe Hunger."],
+        "correct": "Ich gehe spazieren."
+      },
+      {
+        "id": 15,
+        "question": "Was isst du gern?",
+        "options": ["Ich esse gern Pizza.", "Ich bin Lehrer.", "Ich wohne in Hamburg.", "Ich habe ein Auto."],
+        "correct": "Ich esse gern Pizza."
+      },
+      {
+        "id": 16,
+        "question": "Was machst du morgens?",
+        "options": ["Ich frühstücke.", "Ich heiße Paul.", "Ich komme aus Frankreich.", "Ich bin 35 Jahre alt."],
+        "correct": "Ich frühstücke."
+      },
+      {
+        "id": 17,
+        "question": "Was ist dein Lieblingsessen?",
+        "options": ["Pizza.", "Ich bin Student.", "Ich wohne in Berlin.", "Ich trinke Wasser."],
+        "correct": "Pizza."
+      },
+      {
+        "id": 18,
+        "question": "Wann stehst du auf?",
+        "options": ["Um 7 Uhr.", "Ich bin müde.", "Ich heiße Sarah.", "Ich habe Durst."],
+        "correct": "Um 7 Uhr."
+      },
+      {
+        "id": 19,
+        "question": "Was brauchst du?",
+        "options": ["Ich brauche einen Stift.", "Ich wohne in Wien.", "Ich bin Lehrer.", "Ich habe ein Buch."],
+        "correct": "Ich brauche einen Stift."
+      },
+      {
+        "id": 20,
+        "question": "Was trägst du?",
+        "options": ["Ich trage eine Jacke.", "Ich heiße Jan.", "Ich bin 22 Jahre alt.", "Ich wohne in Zürich."],
+        "correct": "Ich trage eine Jacke."
+      },
+      {
+        "id": 21,
+        "question": "Was hörst du gern?",
+        "options": ["Ich höre gern Musik.", "Ich bin Koch.", "Ich wohne in Prag.", "Ich heiße Kevin."],
+        "correct": "Ich höre gern Musik."
+      },
+      {
+        "id": 22,
+        "question": "Was machst du heute?",
+        "options": ["Ich gehe einkaufen.", "Ich heiße Emma.", "Ich bin müde.", "Ich habe einen Hund."],
+        "correct": "Ich gehe einkaufen."
+      },
+      {
+        "id": 23,
+        "question": "Wie viele Geschwister hast du?",
+        "options": ["Zwei.", "Ich wohne in Köln.", "Ich bin Lehrer.", "Ich heiße Jonas."],
+        "correct": "Zwei."
+      },
+      {
+        "id": 24,
+        "question": "Was ist das Gegenteil von 'kalt'?",
+        "options": ["Heiß.", "Alt.", "Langsam.", "Dunkel."],
+        "correct": "Heiß."
+      },
+      {
+        "id": 25,
+        "question": "Wie spät ist es?",
+        "options": ["Es ist zehn Uhr.", "Ich wohne in München.", "Ich bin 30 Jahre alt.", "Ich heiße Lisa."],
+        "correct": "Es ist zehn Uhr."
+      },
+      {
+        "id": 26,
+        "question": "Wie viel kostet das?",
+        "options": ["5 Euro.", "Ich bin müde.", "Ich wohne in Graz.", "Ich heiße Mark."],
+        "correct": "5 Euro."
+      },
+      {
+        "id": 27,
+        "question": "Wo ist die Toilette?",
+        "options": ["Da drüben.", "Ich wohne hier.", "Ich bin Arzt.", "Ich habe keine Katze."],
+        "correct": "Da drüben."
+      },
+      {
+        "id": 28,
+        "question": "Was ist dein Lieblingsfach?",
+        "options": ["Mathematik.", "Ich wohne in Berlin.", "Ich heiße Max.", "Ich bin 18 Jahre alt."],
+        "correct": "Mathematik."
+      },
+      {
+        "id": 29,
+        "question": "Wann hast du Geburtstag?",
+        "options": ["Im Mai.", "Ich bin Lehrer.", "Ich heiße Sophie.", "Ich wohne in Salzburg."],
+        "correct": "Im Mai."
+      },
+      {
+        "id": 30,
+        "question": "Was ist dein Lieblingsfilm?",
+        "options": ["Inception.", "Ich bin 25 Jahre alt.", "Ich heiße Leon.", "Ich wohne in Frankfurt."],
+        "correct": "Inception."
+      },  {
+        "id": 31,
+        "question": "Was machst du am Montag?",
+        "options": ["Ich gehe zur Schule.", "Ich heiße Anna.", "Ich habe einen Bruder.", "Ich bin aus Italien."],
+        "correct": "Ich gehe zur Schule."
+      },
+      {
+        "id": 32,
+        "question": "Welche Farbe hat die Banane?",
+        "options": ["Gelb.", "Grün.", "Blau.", "Rot."],
+        "correct": "Gelb."
+      },
+      {
+        "id": 33,
+        "question": "Wie viele Beine hat eine Katze?",
+        "options": ["Vier.", "Zwei.", "Sechs.", "Acht."],
+        "correct": "Vier."
+      },
+      {
+        "id": 34,
+        "question": "Was ist das Gegenteil von 'klein'?",
+        "options": ["Groß.", "Kurz.", "Schmal.", "Alt."],
+        "correct": "Groß."
+      },
+      {
+        "id": 35,
+        "question": "Was ziehst du im Winter an?",
+        "options": ["Eine Jacke.", "Ein T-Shirt.", "Eine Badehose.", "Ein Kleid."],
+        "correct": "Eine Jacke."
+      },
+      {
+        "id": 36,
+        "question": "Was kannst du gut?",
+        "options": ["Ich kann gut kochen.", "Ich wohne in Bonn.", "Ich habe einen Hund.", "Ich heiße Lukas."],
+        "correct": "Ich kann gut kochen."
+      },
+      {
+        "id": 37,
+        "question": "Was ist dein Lieblingssport?",
+        "options": ["Basketball.", "Ich bin müde.", "Ich heiße Maria.", "Ich bin aus Polen."],
+        "correct": "Basketball."
+      },
+      {
+        "id": 38,
+        "question": "Wen rufst du an?",
+        "options": ["Meine Mutter.", "Ich heiße Klaus.", "Ich bin 20 Jahre alt.", "Ich wohne in Hamburg."],
+        "correct": "Meine Mutter."
+      },
+      {
+        "id": 39,
+        "question": "Was brauchst du für die Schule?",
+        "options": ["Einen Rucksack.", "Einen Apfel.", "Ein Auto.", "Eine Jacke."],
+        "correct": "Einen Rucksack."
+      },
+      {
+        "id": 40,
+        "question": "Was machst du abends?",
+        "options": ["Ich sehe fern.", "Ich bin Lehrer.", "Ich wohne in Berlin.", "Ich heiße Lara."],
+        "correct": "Ich sehe fern."
+      },
+      {
+        "id": 41,
+        "question": "Was macht dein Vater?",
+        "options": ["Er arbeitet als Arzt.", "Er ist mein Bruder.", "Ich bin Student.", "Ich trinke Kaffee."],
+        "correct": "Er arbeitet als Arzt."
+      },
+      {
+        "id": 42,
+        "question": "Was ist das Gegenteil von 'langsam'?",
+        "options": ["Schnell.", "Kurz.", "Groß.", "Schmal."],
+        "correct": "Schnell."
+      },
+      {
+        "id": 43,
+        "question": "Was möchtest du essen?",
+        "options": ["Ein Sandwich.", "Ich bin Student.", "Ich wohne in Prag.", "Ich habe keine Katze."],
+        "correct": "Ein Sandwich."
+      },
+      {
+        "id": 44,
+        "question": "Was passt nicht?",
+        "options": ["Apfel, Banane, Tisch, Orange."],
+        "correct": "Tisch"
+      },
+      {
+        "id": 45,
+        "question": "Was machst du im Sommer?",
+        "options": ["Ich gehe schwimmen.", "Ich trage eine Jacke.", "Ich baue einen Schneemann.", "Ich esse Suppe."],
+        "correct": "Ich gehe schwimmen."
+      },
+      {
+        "id": 46,
+        "question": "Wann beginnt die Schule?",
+        "options": ["Um 8 Uhr.", "Ich bin Schüler.", "Ich heiße Tim.", "Ich habe Hunger."],
+        "correct": "Um 8 Uhr."
+      },
+      {
+        "id": 47,
+        "question": "Was trinkst du morgens?",
+        "options": ["Kaffee.", "Käse.", "Brot.", "Pizza."],
+        "correct": "Kaffee."
+      },
+      {
+        "id": 48,
+        "question": "Welche Tiere leben im Zoo?",
+        "options": ["Löwen.", "Hunde.", "Katzen.", "Hühner."],
+        "correct": "Löwen."
+      },
+      {
+        "id": 49,
+        "question": "Wo lernst du Deutsch?",
+        "options": ["In der Sprachschule.", "Im Supermarkt.", "Im Kino.", "Zu Hause mit Papa."],
+        "correct": "In der Sprachschule."
+      },
+      {
+        "id": 50,
+        "question": "Wie viele Tage hat eine Woche?",
+        "options": ["Sieben.", "Fünf.", "Acht.", "Drei."],
+        "correct": "Sieben."
+      },
+      {
+        "id": 51,
+        "question": "Was ist ein Tisch?",
+        "options": ["Ein Möbelstück.", "Ein Getränk.", "Ein Tier.", "Ein Kleidungsstück."],
+        "correct": "Ein Möbelstück."
+      },
+      {
+        "id": 52,
+        "question": "Wo kaufst du Brot?",
+        "options": ["In der Bäckerei.", "In der Schule.", "Im Krankenhaus.", "Im Park."],
+        "correct": "In der Bäckerei."
+      },
+      {
+        "id": 53,
+        "question": "Was ist das Gegenteil von 'hell'?",
+        "options": ["Dunkel.", "Lang.", "Klein.", "Weit."],
+        "correct": "Dunkel."
+      },
+      {
+        "id": 54,
+        "question": "Welche Jahreszeit ist warm?",
+        "options": ["Der Sommer.", "Der Winter.", "Der Herbst.", "Der Frühling."],
+        "correct": "Der Sommer."
+      },
+      {
+        "id": 55,
+        "question": "Was machst du im Urlaub?",
+        "options": ["Ich reise.", "Ich lerne Mathe.", "Ich putze mein Zimmer.", "Ich kaufe Brot."],
+        "correct": "Ich reise."
+      },
+      {
+        "id": 56,
+        "question": "Was machst du gern zu Hause?",
+        "options": ["Ich koche gern.", "Ich fahre Fahrrad.", "Ich gehe schwimmen.", "Ich spiele Fußball."],
+        "correct": "Ich koche gern."
+      },
+      {
+        "id": 57,
+        "question": "Was ist dein Lieblingsgetränk?",
+        "options": ["Orangensaft.", "Apfel.", "Käse.", "Reis."],
+        "correct": "Orangensaft."
+      },
+      {
+        "id": 58,
+        "question": "Was isst du zum Frühstück?",
+        "options": ["Brötchen.", "Nudeln.", "Pizza.", "Suppe."],
+        "correct": "Brötchen."
+      },
+      {
+        "id": 59,
+        "question": "Wo sitzt du in der Schule?",
+        "options": ["Auf dem Stuhl.", "Im Schrank.", "Unter dem Bett.", "An der Wand."],
+        "correct": "Auf dem Stuhl."
+      },
+      {
+        "id": 60,
+        "question": "Was trägst du im Sommer?",
+        "options": ["Ein T-Shirt.", "Einen Mantel.", "Einen Schal.", "Eine Mütze."],
+        "correct": "Ein T-Shirt."
+      },{
+        "id": 61,
+        "question": "Wie spät ist es?",
+        "options": ["Es ist 10 Uhr.", "Ich heiße Paul.", "Ich bin müde.", "Ich habe einen Hund."],
+        "correct": "Es ist 10 Uhr."
+      },
+      {
+        "id": 62,
+        "question": "Was passt nicht: Apfel, Birne, Tisch, Orange?",
+        "options": ["Tisch.", "Apfel.", "Birne.", "Orange."],
+        "correct": "Tisch."
+      },
+      {
+        "id": 63,
+        "question": "Wie ist das Wetter im Winter?",
+        "options": ["Kalt.", "Heiß.", "Trocken.", "Warm."],
+        "correct": "Kalt."
+      },
+      {
+        "id": 64,
+        "question": "Was brauchst du zum Schreiben?",
+        "options": ["Einen Stift.", "Ein Messer.", "Einen Teller.", "Ein Glas."],
+        "correct": "Einen Stift."
+      },
+      {
+        "id": 65,
+        "question": "Was sagt man am Morgen?",
+        "options": ["Guten Morgen.", "Gute Nacht.", "Tschüss.", "Willkommen."],
+        "correct": "Guten Morgen."
+      },
+      {
+        "id": 66,
+        "question": "Was machst du am Wochenende?",
+        "options": ["Ich schlafe lange.", "Ich arbeite in der Schule.", "Ich kaufe ein Auto.", "Ich lese einen Test."],
+        "correct": "Ich schlafe lange."
+      },
+      {
+        "id": 67,
+        "question": "Was ist dein Hobby?",
+        "options": ["Ich male gern.", "Ich bin 18 Jahre alt.", "Ich heiße Clara.", "Ich wohne in Wien."],
+        "correct": "Ich male gern."
+      },
+      {
+        "id": 68,
+        "question": "Was trinkst du gern?",
+        "options": ["Wasser.", "Brot.", "Reis.", "Wurst."],
+        "correct": "Wasser."
+      },
+      {
+        "id": 69,
+        "question": "Wie heißt dein Freund?",
+        "options": ["Er heißt Ben.", "Ich bin 16.", "Ich bin Lehrer.", "Ich esse Suppe."],
+        "correct": "Er heißt Ben."
+      },
+      {
+        "id": 70,
+        "question": "Was liegt auf dem Tisch?",
+        "options": ["Ein Buch.", "Ein Fenster.", "Ein Stuhl.", "Eine Tür."],
+        "correct": "Ein Buch."
+      },
+      {
+        "id": 71,
+        "question": "Was machst du in der Küche?",
+        "options": ["Ich koche.", "Ich lerne.", "Ich schlafe.", "Ich bade."],
+        "correct": "Ich koche."
+      },
+      {
+        "id": 72,
+        "question": "Was hörst du gern?",
+        "options": ["Musik.", "Kaffee.", "Milch.", "Brot."],
+        "correct": "Musik."
+      },
+      {
+        "id": 73,
+        "question": "Was kaufst du im Supermarkt?",
+        "options": ["Lebensmittel.", "Bücher.", "Stühle.", "Autos."],
+        "correct": "Lebensmittel."
+      },
+      {
+        "id": 74,
+        "question": "Was brauchst du im Badezimmer?",
+        "options": ["Seife.", "Teller.", "Stuhl.", "Teppich."],
+        "correct": "Seife."
+      },
+      {
+        "id": 75,
+        "question": "Wo schläfst du?",
+        "options": ["Im Bett.", "Im Auto.", "Im Bad.", "In der Küche."],
+        "correct": "Im Bett."
+      },
+      {
+        "id": 76,
+        "question": "Wie kommst du zur Schule?",
+        "options": ["Mit dem Bus.", "Mit dem Messer.", "Mit dem Teller.", "Mit dem Glas."],
+        "correct": "Mit dem Bus."
+      },
+      {
+        "id": 77,
+        "question": "Was machst du am Abend?",
+        "options": ["Ich lese ein Buch.", "Ich gehe zur Arbeit.", "Ich esse Frühstück.", "Ich putze morgens."],
+        "correct": "Ich lese ein Buch."
+      },
+      {
+        "id": 78,
+        "question": "Was ist gesund?",
+        "options": ["Obst.", "Cola.", "Pommes.", "Kuchen."],
+        "correct": "Obst."
+      },
+      {
+        "id": 79,
+        "question": "Was trägst du, wenn es regnet?",
+        "options": ["Einen Regenschirm.", "Eine Sonnenbrille.", "Ein T-Shirt.", "Eine Badehose."],
+        "correct": "Einen Regenschirm."
+      },
+      {
+        "id": 80,
+        "question": "Was brauchst du zum Frühstück?",
+        "options": ["Brötchen und Butter.", "Seife und Wasser.", "Buch und Bleistift.", "Stuhl und Tisch."],
+        "correct": "Brötchen und Butter."
+      },
+      {
+        "id": 81,
+        "question": "Was machst du am Sonntag?",
+        "options": ["Ich besuche meine Familie.", "Ich gehe zur Arbeit.", "Ich lerne in der Schule.", "Ich mache Sport im Büro."],
+        "correct": "Ich besuche meine Familie."
+      },
+      {
+        "id": 82,
+        "question": "Was ist das Gegenteil von 'neu'?",
+        "options": ["Alt.", "Klein.", "Langsam.", "Kurz."],
+        "correct": "Alt."
+      },
+      {
+        "id": 83,
+        "question": "Was ist dein Lieblingsfach?",
+        "options": ["Mathe.", "Cola.", "Pizza.", "Tisch."],
+        "correct": "Mathe."
+      },
+      {
+        "id": 84,
+        "question": "Wo isst du zu Mittag?",
+        "options": ["In der Kantine.", "Im Auto.", "Im Park.", "Im Schlafzimmer."],
+        "correct": "In der Kantine."
+      },
+      {
+        "id": 85,
+        "question": "Was brauchst du zum Lesen?",
+        "options": ["Ein Buch.", "Ein Messer.", "Ein Ball.", "Ein Brot."],
+        "correct": "Ein Buch."
+      },
+      {
+        "id": 86,
+        "question": "Was sagt man um 22 Uhr?",
+        "options": ["Gute Nacht.", "Hallo.", "Guten Morgen.", "Tschüss."],
+        "correct": "Gute Nacht."
+      },
+      {
+        "id": 87,
+        "question": "Was isst du gern?",
+        "options": ["Pizza.", "Wasser.", "Cola.", "Milch."],
+        "correct": "Pizza."
+      },
+      {
+        "id": 88,
+        "question": "Wie heißt deine Mutter?",
+        "options": ["Sie heißt Anna.", "Ich bin 18 Jahre alt.", "Ich wohne in Bonn.", "Ich habe einen Bruder."],
+        "correct": "Sie heißt Anna."
+      },
+      {
+        "id": 89,
+        "question": "Wo ist dein Handy?",
+        "options": ["Auf dem Tisch.", "Im Fuß.", "Unter der Lampe.", "Neben dem Brot."],
+        "correct": "Auf dem Tisch."
+      },
+      {
+        "id": 90,
+        "question": "Was macht man im Schlafzimmer?",
+        "options": ["Schlafen.", "Kochen.", "Lesen.", "Waschen."],
+        "correct": "Schlafen."
+      },    {
+        "id": 91,
+        "question": "Wie viele Geschwister hast du?",
+        "options": ["Zwei Brüder.", "Ich heiße Lukas.", "Ich wohne in Bremen.", "Ich bin Lehrer."],
+        "correct": "Zwei Brüder."
+      },
+      {
+        "id": 92,
+        "question": "Was ist dein Lieblingsessen?",
+        "options": ["Spaghetti.", "Lesen.", "Auto.", "Laufen."],
+        "correct": "Spaghetti."
+      },
+      {
+        "id": 93,
+        "question": "Welche Sprache sprichst du?",
+        "options": ["Deutsch.", "Buch.", "Auto.", "Tisch."],
+        "correct": "Deutsch."
+      },
+      {
+        "id": 94,
+        "question": "Was machst du im Sommer?",
+        "options": ["Ich fahre ans Meer.", "Ich baue einen Schneemann.", "Ich trinke Tee.", "Ich esse Suppe."],
+        "correct": "Ich fahre ans Meer."
+      },
+      {
+        "id": 95,
+        "question": "Was ist dein Beruf?",
+        "options": ["Ich bin Arzt.", "Ich bin müde.", "Ich habe Hunger.", "Ich esse Pizza."],
+        "correct": "Ich bin Arzt."
+      },
+      {
+        "id": 96,
+        "question": "Wie kommst du zur Arbeit?",
+        "options": ["Mit dem Fahrrad.", "Mit dem Teller.", "Mit dem Fenster.", "Mit dem Sofa."],
+        "correct": "Mit dem Fahrrad."
+      },
+      {
+        "id": 97,
+        "question": "Wann stehst du auf?",
+        "options": ["Um 7 Uhr.", "In der Schule.", "Im Auto.", "Am Abend."],
+        "correct": "Um 7 Uhr."
+      },
+      {
+        "id": 98,
+        "question": "Was hast du im Rucksack?",
+        "options": ["Ein Heft.", "Eine Lampe.", "Ein Sofa.", "Ein Fernseher."],
+        "correct": "Ein Heft."
+      },
+      {
+        "id": 99,
+        "question": "Was brauchst du zum Frühstück?",
+        "options": ["Milch und Brot.", "Seife und Shampoo.", "Buch und Kugelschreiber.", "Schuhe und Hose."],
+        "correct": "Milch und Brot."
+      },
+      {
+        "id": 100,
+        "question": "Was ist dein Lieblingssport?",
+        "options": ["Fußball.", "Tisch.", "Fenster.", "Teller."],
+        "correct": "Fußball."
+      }
     ],
     A2: [
       {

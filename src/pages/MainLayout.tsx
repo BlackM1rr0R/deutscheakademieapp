@@ -15,9 +15,9 @@ const MainLayout = ({ children }: Props) => {
     <SafeAreaView style={styles.container}>
       <Wrapper>
         <Header />
-        <ScrollView contentContainerStyle={{ flexGrow: 1, paddingTop: 20 }}>
+        <View style={{ flex: 1 }}>
           {children}
-        </ScrollView>
+        </View>
         <Footer />
       </Wrapper>
     </SafeAreaView>

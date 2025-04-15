@@ -76,7 +76,7 @@ const AboutComp = () => {
 };
 const styles = StyleSheet.create({
   headerButton: {
-    marginTop: 20,
+   
     width: 140,
     backgroundColor: "#F3F0FF",
     paddingLeft: 20,

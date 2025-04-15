@@ -1,6 +1,6 @@
 // HomePage.tsx
 import React from "react";
-import { View } from "react-native";
+import { ScrollView, View } from "react-native";
 import MainLayout from "./MainLayout";
 import HomeScreen from "../components/HomeScreen";
 import AboutComp from "../components/AboutComp";
@@ -10,11 +10,11 @@ import TestGermany from "../components/TestGermany";
 const HomePage = () => {
   return (
     <MainLayout>
-      <View>
-        <HomeScreen />
-        <AboutComp />
+      <ScrollView>
         <TestGermany/>
-      </View>
+        <AboutComp />
+        <HomeScreen />
+      </ScrollView>
     </MainLayout>
   );
 };

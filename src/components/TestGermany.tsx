@@ -8,13 +8,13 @@ const TestGermany = () => {
         <>
             <Wrapper>
 
-                <ScrollView>
+            
                     <View style={styles.headerButton}>
                         <Text style={styles.headerButtonText}>
-                            Yeniliklər
+                            Test et
                         </Text>
                     </View>
-                </ScrollView >
+              
 
             </Wrapper>
             <View style={styles.controlBorder}>
@@ -44,7 +44,7 @@ const TestGermany = () => {
 }
 const styles = StyleSheet.create({
     headerButton: {
-        marginTop: 20,
+     
         width: 120,
         backgroundColor: "#F3F0FF",
         paddingLeft: 20,

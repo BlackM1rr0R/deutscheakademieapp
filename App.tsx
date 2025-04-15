@@ -14,23 +14,27 @@ import HomePage from "./src/pages/HomePage";
 import Header from "./src/components/Header";
 import TestPraktik from "./src/pages/TestPraktik";
 import PracticeQuiz from "./src/pages/PracticeQuiz";
+import Wrapper from "./src/components/Wrapper";
+import { Footer } from "./src/components/Footer";
+import DetailsVisa from "./src/pages/DetailsVisa";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
-        
-        <Stack.Screen name="Home" component={HomePage} />
-        <Stack.Screen name="Profile" component={Profile} />
-        <Stack.Screen name="Course" component={Course} />
-        <Stack.Screen name="About" component={About} />
-        <Stack.Screen name="Contact" component={Contact} />
-        <Stack.Screen name="Test" component={TestPraktik} />
-        <Stack.Screen name="PracticeQuiz" component={PracticeQuiz} />
-      </Stack.Navigator>
-    </NavigationContainer>
+      <NavigationContainer>
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="Home" component={HomePage} />
+          <Stack.Screen name="Profile" component={Profile} />
+          <Stack.Screen name="Course" component={Course} />
+          <Stack.Screen name="About" component={About} />
+          <Stack.Screen name="Contact" component={Contact} />
+          <Stack.Screen name="Test" component={TestPraktik} />
+          <Stack.Screen name="PracticeQuiz" component={PracticeQuiz} />
+          <Stack.Screen name="DetailsVisa" component={DetailsVisa} />
+        </Stack.Navigator>
+      </NavigationContainer>
+  
   );
 };
 

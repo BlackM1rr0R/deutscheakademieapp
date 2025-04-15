@@ -1,208 +1,168 @@
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native"
+import { FlatList, Image, Pressable, StyleSheet, Text, TouchableOpacity, TouchableWithoutFeedback, View } from "react-native"
 import MainLayout from "./MainLayout";
 import VerifiedIcon from "../Icons";
+import Wrapper from "../components/Wrapper";
+import { useState } from "react";
+
 
 const Course = () => {
     const data = [
         {
             id: 1,
-            title: "A1-A2 Səviyyə",
+            title: "A1-A2 səviyyə",
             description: "Yeni başlayanlar üçün dərsliklər",
             duration: "Dərsliklər kurs tərəfindən hədiyyə",
             textDesc: "Ali Təhsilli müəllimlərimiz ilə 4 ay",
             textOnline: "Online və Offline dərslər",
             textGroup: "Grup və Fərdi dərslər",
             price: "200 Azn",
-            image: require("../assets/a+.png")
+
         },
         {
             id: 2,
-            title: "B1-B2 Səviyyə",
+            title: "B1-B2 səviyyə",
             description: "Orta səviyyə üçün mükəmməl dərsliklər",
             duration: "Dərsliklər kurs tərəfindən hədiyyə",
             textDesc: "Ali Təhsilli müəllimlərimiz ilə 5 ay",
             textOnline: "Online və Offline dərslər",
             textGroup: "Grup və Fərdi dərslər",
             price: "300 Azn",
-            image: require("../assets/b+.png")
+
         },
         {
             id: 3,
-            title: "C1-C2 Səviyyə",
+            title: "C1-C2 səviyyə",
             description: "Almanca əla danışanlar üçün dərsliklər",
             duration: "Dərsliklər kurs tərəfindən hədiyyə",
             textDesc: "Ali Təhsilli müəllimlərimiz ilə 5 ay",
             textOnline: "Online və Offline dərslər",
             textGroup: "Grup və Fərdi dərslər",
             price: "400 Azn",
-            image: require("../assets/c+.png")
-        },
-        {
-            id: 4,
-            title: "İş Vizası",
-            description: "İş yeri ilə müsahibə",
-            duration: "Müqavilənin alınması",
-            textDesc: "Sənədlərin yığılması",
-            textOnline: "Viza dəstəyi",
-            textGroup: "Ev ilə təmin olunma",
-            price: "2500 Euro",
-            image: require("../assets/workicon.png")
-        },
-        {
-            id: 5,
-            title: "Təhsil Vizası",
-            description: "Universitet ilə müsahibə",
-            duration: "Müqavilənin alınması",
-            textDesc: "Sənədlərin yığılması",
-            textOnline: "Viza dəstəyi",
-            textGroup: "Ev ilə təmin olunma",
-            price: "1500 Euro",
-            image: require("../assets/studenticon.png")
-        },
-        {
-            id: 6,
-            title: "Ausbildung Vizası",
-            description: "Ausbildung şirkəti ilə müsahibə",
-            duration: "Müqavilənin alınması",
-            textDesc: "Sənədlərin yığılması",
-            textOnline: "Viza dəstəyi",
-            textGroup: "Ev ilə təmin olunma",
-            price: "1500 Euro",
-            image: require("../assets/ausbildungicon.png")
-        },
-        {
-            id: 7,
-            title: "Ailə Birləşimi Vizası",
-            description: "Almaniya ilə razılıq",
-            duration: "Sertifikatın alınması",
-            textDesc: "Sənədlərin yığılması",
-            textOnline: "Viza dəstəyi",
-            textGroup: "Ev ilə təmin olunma",
-            price: "1700 Euro",
-            image: require("../assets/familyicon.png")
-        },
-        {
-            id: 8,
-            title: "Praktikant Vizası",
-            description: "Praktikum şirkəti ilə müsahibə",
-            duration: "Müqavilənin alınması",
-            textDesc: "Sənədlərin yığılması",
-            textOnline: "Viza dəstəyi",
-            textGroup: "Ev ilə təmin olunma",
-            price: "2000 Euro",
-            image: require("../assets/weiterbildungicon.png")
-        },
-        {
-            id: 9,
-            title: "Turist Vizası",
-            description: "Schengen vizanın alınmağı",
-            duration: "Səfirliyə hazırlıq",
-            textDesc: "Sənədlərin yığılması",
-            textOnline: "Viza dəstəyi",
-            textGroup: "Ev ilə təmin olunma",
-            price: "500 Euro",
-            image: require("../assets/tourist.png")
-        },
+
+        }
+        
 
     ]
+    const renderItem = ({ item }) => (
+        <Pressable
+            style={({ pressed }) => [
+                styles.mapControl,
+                pressed && styles.hoveredStyle
+            ]}
+        >
+            <Text style={styles.courseTitle}>{item.title}</Text>
+
+            <View style={styles.textRow}>
+                <View style={styles.circleIcon} />
+                <Text style={styles.textMap}>{item.description}</Text>
+            </View>
+            <View style={styles.textRow}>
+                <View style={styles.circleIcon} />
+                <Text style={styles.textMap}>{item.duration}</Text>
+            </View>
+            <View style={styles.textRow}>
+                <View style={styles.circleIcon} />
+                <Text style={styles.textMap}>{item.textDesc}</Text>
+            </View>
+            <View style={styles.textRow}>
+                <View style={styles.circleIcon} />
+                <Text style={styles.textMap}>{item.textOnline}</Text>
+            </View>
+            <View style={styles.textRow}>
+                <View style={styles.circleIcon} />
+                <Text style={styles.textMap}>{item.textGroup}</Text>
+            </View>
+            <TouchableOpacity style={styles.buttonControl}>
+                <Text style={styles.buttonText}>{item.price}</Text>
+            </TouchableOpacity>
+        </Pressable>
+    );
+
     return (
         <MainLayout>
-
-            <Text>
-                <View style={styles.controlBorders}>
-                    {data.map((course) => (
-                        <View style={styles.mapControl} key={course.id}>
-                            <Image source={course.image} style={styles.images} />
-                            <Text style={{ fontSize: 19, paddingLeft: 10, fontWeight: 700 }}>{course.title}</Text>
-                            <View style={styles.textRow}>
-                                <VerifiedIcon />
-                                <Text style={styles.textMap}>{course.description}</Text>
-                            </View>
-                            <View style={styles.textRow}>
-                                <VerifiedIcon />
-                                <Text style={styles.textMap}>{course.duration}</Text>
-                            </View>
-                            <View style={styles.textRow}>
-                                <VerifiedIcon />
-                                <Text style={styles.textMap}>{course.textDesc}</Text>
-                            </View>
-                            <View style={styles.textRow}>
-                                <VerifiedIcon />
-                                <Text style={styles.textMap}>{course.textOnline}</Text>
-                            </View>
-                            <View style={styles.textRow}>
-                                <VerifiedIcon />
-                                <Text style={styles.textMap}>{course.textGroup}</Text>
-                            </View>
-
-                            <TouchableOpacity style={styles.buttonControl}>
-                                <Text style={styles.buttonText}>{course.price}</Text>
-                            </TouchableOpacity>
-                        </View>
-                    ))}
+            <Wrapper>
+                <View style={styles.headerButton}>
+                    <Text style={styles.headerButtonText}>Kurslar</Text>
                 </View>
-            </Text>
+                <FlatList
+                    data={data}
+                    renderItem={renderItem}
+                    keyExtractor={(item) => item.id.toString()}
+                    contentContainerStyle={styles.controlBorders}
+                />
+            </Wrapper>
         </MainLayout>
-    )
-}
+    );
+};
+
 const styles = StyleSheet.create({
+    headerButton: {
+        width: 120,
+        backgroundColor: "#F3F0FF",
+        paddingVertical: 10,
+        paddingHorizontal: 20,
+        borderRadius: 20,
+        alignItems: "center",
+        marginBottom: 20,
+    },
+    headerButtonText: {
+        fontSize: 16,
+        fontWeight: "500",
+    },
     mapControl: {
         padding: 20,
-        borderWidth: 1,
-        borderColor: "blue",
-        width: "100%",
         backgroundColor: "white",
-        borderRadius: 10,
+        borderRadius: 15,
         shadowColor: "#000",
-        shadowOffset: {
-            width: 0,
-            height: 2,
-        },
-        shadowOpacity: 0.25,
-        shadowRadius: 3.84,
-        elevation: 5,
-        gap: 20,
-        alignItems: "center", // <--- Bu sətir əlavə olundu
+        shadowOffset: { width: 0, height: 4 },
+        elevation: 6,
+        marginBottom: 20,
+    },
+    hoveredStyle: {
+        backgroundColor: "#E6E0FF",
     },
     controlBorders: {
-        width: "100%",
-        gap: 20,
-        paddingBottom: 20
-
+        backgroundColor: "white",
+        width: "98%",
+        alignSelf: "center",
+        paddingBottom: 20,
+    },
+    courseTitle: {
+        fontSize: 19,
+        fontWeight: "700",
+        marginBottom: 10,
+        textAlign: "left",
     },
     textMap: {
         color: "black",
         fontSize: 16,
-        width: "100%",
-        paddingLeft: 10,
-        alignItems: "center",
-        justifyContent: "center",
+        flex: 1,
     },
     textRow: {
         flexDirection: "row",
         alignItems: "center",
-        gap: 0
-
+        marginBottom: 8,
     },
-
     buttonControl: {
         backgroundColor: "#524FD5",
         padding: 10,
         borderRadius: 10,
-        width: "40%",
-        alignItems: "center",
-        justifyContent: "center",
+        marginTop: 10,
+        alignSelf: "flex-start",
+        paddingHorizontal: 20,
     },
     buttonText: {
         color: "white",
         fontSize: 16,
-        fontWeight: 700,
+        fontWeight: "700",
         textAlign: "center",
     },
-    images: {
-        margin: 10,
-        width: 80,
-        height: 80,
-    }
-})
+    circleIcon: {
+        width: 7,
+        height: 7,
+        borderRadius: 10,
+        backgroundColor: "gray",
+        marginRight: 8,
+    },
+});
 export default Course;

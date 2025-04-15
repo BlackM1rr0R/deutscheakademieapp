@@ -1,21 +1,33 @@
-import { useState } from "react";
-import { View, Text, TouchableOpacity, StyleSheet, ScrollView } from "react-native";
-import { RouteProp, useRoute } from "@react-navigation/native";
+import { useEffect, useState } from "react";
+import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Image } from "react-native";
+import { RouteProp, useNavigation, useRoute } from "@react-navigation/native";
 import { RootStackParamList } from "../types";
 import Header from "../components/Header";
 import quizData from '../assets/data/quizData.json'
 type QuizScreenRouteProp = RouteProp<RootStackParamList, "PracticeQuiz">;
 
 const PracticeQuiz = () => {
+    const navigation = useNavigation();
     const route = useRoute<QuizScreenRouteProp>();
     const { level } = route.params;
 
-    const questions = quizData[level] || [];
-
-
-
+    const [questions, setQuestions] = useState([]);
     const [selectedAnswers, setSelectedAnswers] = useState<{ [key: number]: string }>({});
     const [showScore, setShowScore] = useState(false);
+    useEffect(() => {
+        const shuffled = [...(quizData[level] || [])]
+            .sort(() => 0.5 - Math.random())
+            .slice(0, 10)
+            .map((q, index) => ({
+                ...q,
+                id: index + 1,
+            }));
+
+        setQuestions(shuffled);
+        setSelectedAnswers({});
+        setShowScore(false);
+    }, [level]);
+
 
     const calculateScore = () => {
         let score = 0;
@@ -27,15 +39,30 @@ const PracticeQuiz = () => {
         return score;
     };
 
+    const getPerformanceText = (score: number) => {
+        if (score <= 4) return "Zəif";
+        if (score <= 6) return "Orta";
+        if (score <= 8) return "Yaxşı";
+        return "Mükəmməl";
+    };
+
+
     return (
-        <>
-            <Header />
-            <ScrollView contentContainerStyle={styles.container}>
+        <View style={styles.container}>
+            <View style={styles.fixedHeader}>
+                <Header />
+                <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
+                    <Image style={styles.leftArrowImage} source={require("../assets/leftarrow.png")} />
+                    <Text style={styles.leftBackText}>Geri</Text>
+                </TouchableOpacity>
+            </View>
+
+            <ScrollView contentContainerStyle={styles.scrollContent}>
                 <Text style={styles.title}>{level} səviyyə testi</Text>
 
                 {questions.map((q) => (
                     <View key={q.id} style={styles.questionBox}>
-                        <Text style={styles.questionText}>{q.question}</Text>
+                        <Text style={styles.questionText}>{q.id}. {q.question}</Text>
                         {q.options.map((option) => (
                             <TouchableOpacity
                                 key={option}
@@ -61,21 +88,38 @@ const PracticeQuiz = () => {
                 </TouchableOpacity>
 
                 {showScore && (
-                    <Text style={styles.scoreText}>
-                        Bütün düzgün cavablar: {calculateScore()} / {questions.length}
-                    </Text>
+                    <View style={{ marginTop: 20, alignItems: "center" }}>
+                        <Text style={styles.scoreText}>
+                            Bütün düzgün cavablar: {calculateScore()} / {questions.length}
+                        </Text>
+                        <Text style={styles.performanceText}>
+                            Nəticə: {getPerformanceText(calculateScore())}
+                        </Text>
+                    </View>
                 )}
             </ScrollView>
-        </>
+        </View>
 
     );
 };
 
 const styles = StyleSheet.create({
     container: {
-        padding: 20,
-        paddingBottom: 100,
+        flex: 1,
         backgroundColor: "#fff",
+    },
+    fixedHeader: {
+        backgroundColor: "#fff",
+        padding: 20,
+        paddingTop: 40, // for safe area (optional)
+        zIndex: 10,
+        borderBottomWidth: 1,
+        borderBottomColor: "#eee",
+    },
+    scrollContent: {
+        padding: 20,
+        paddingTop: 10,
+        paddingBottom: 100,
     },
     title: {
         fontSize: 22,
@@ -126,6 +170,28 @@ const styles = StyleSheet.create({
         marginTop: 20,
         textAlign: "center",
     },
+    backButton: {
+        flexDirection: "row",
+        alignItems: "center",
+        marginTop: 10,
+    },
+    leftArrowImage: {
+        width: 16,
+        height: 16,
+    },
+    leftBackText: {
+        fontSize: 24,
+        fontWeight: "600",
+        color: "#524FD5",
+        marginLeft: 10,
+    },
+    performanceText: {
+        fontSize: 18,
+        fontWeight: "700",
+        color: "#524FD5",
+        marginTop: 10,
+    },
 });
+
 
 export default PracticeQuiz;
