@@ -8,9 +8,9 @@ type NavigationProp = StackNavigationProp<RootStackParamList>;
 const menuItems = [
     { name: "Home", label: "Ana Səhifə", icon: require("../assets/homeicon.png") },
     { name: "Course", label: "Kurslar", icon: require("../assets/bookicon.png") },
-    { name: "About", label: "Haqqımızda", icon: require("../assets/personalcard.png") },
-    { name: "Contact", label: "Əlaqə", icon: require("../assets/userprofile.png") },
-    { name: "Profile", label: "Profil", icon: require("../assets/mobile.png") },
+    { name: "About", label: "Xidmətlər", icon: require("../assets/personalcard.png") },
+    { name: "Contact", label: "Haqqımızda", icon: require("../assets/userprofile.png") },
+    { name: "Profile", label: "Əlaqə", icon: require("../assets/mobile.png") },
 ];
 
 export const Footer = () => {
