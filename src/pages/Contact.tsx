@@ -2,6 +2,7 @@ import { Animated, Image, ScrollView, StyleSheet, Text, View, Easing } from "rea
 import MainLayout from "./MainLayout";
 import Wrapper from "../components/Wrapper";
 import { useEffect, useState } from "react";
+import { useRoute } from "@react-navigation/native";
 
 const Contact = () => {
     const data = [
@@ -53,7 +54,8 @@ const Contact = () => {
     const [animated242, setAnimated242] = useState(new Animated.Value(0));
     const [animated100, setAnimated100] = useState(new Animated.Value(0));
     const [animated50, setAnimated50] = useState(new Animated.Value(0));
-
+    const route = useRoute();
+    const { student } = route.params || {};
     // Animasyonları başlatacak fonksiyon
     const animateNumbers = (numValue) => {
         return Animated.timing(numValue, {
@@ -137,13 +139,26 @@ const Contact = () => {
                     </Text>
 
                     <ScrollView horizontal pagingEnabled showsHorizontalScrollIndicator={false}>
-                        {data.map((item, index) => (
+                        {student ? (
+                            data.map((item, index) => (
+                                <View key={item.id} style={styles.card}>
+                                    <Text style={styles.cardTitle}>Adı: {item.content}</Text>
+                                    <Text style={styles.cardTitle}>Sahəsi: {item.title}</Text>
+                                    <Text ellipsizeMode="tail" numberOfLines={5} style={styles.cardDescription}>
+                                        {item.description}
+                                    </Text>
+                                </View>
+                            ))
+                        ) : data.map((item, index) => (
                             <View key={item.id} style={styles.card}>
                                 <Text style={styles.cardTitle}>Adı: {item.content}</Text>
                                 <Text style={styles.cardTitle}>Sahəsi: {item.title}</Text>
-                                <Text ellipsizeMode="tail" numberOfLines={5} style={styles.cardDescription}>{item.description}</Text>
+                                <Text ellipsizeMode="tail" numberOfLines={5} style={styles.cardDescription}>
+                                    {item.description}
+                                </Text>
                             </View>
                         ))}
+
                     </ScrollView>
                     <Text style={styles.ugurText}>
                         Qısa məlumat
@@ -179,7 +194,7 @@ const styles = StyleSheet.create({
         lineHeight: 28,
         color: "#333",
         fontFamily: "Plus Jakarta Sans",
-       
+
         marginBottom: 15,
     }
     ,

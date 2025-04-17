@@ -56,7 +56,7 @@ const AboutComp = () => {
         <View >
           <View style={styles.headerButton}>
             <Text style={styles.headerButtonText}>
-              Xidmətlərimiz
+            🛠️ Xidmətlərimiz
             </Text>
           </View>
           <ScrollView horizontal pagingEnabled showsHorizontalScrollIndicator={false}>
@@ -77,25 +77,29 @@ const AboutComp = () => {
 const styles = StyleSheet.create({
   headerButton: {
    
-    width: 140,
+    width: 180,
     backgroundColor: "#F3F0FF",
     paddingLeft: 20,
     paddingRight: 20,
     paddingTop: 10,
     paddingBottom: 10,
     borderRadius: 20,
+    marginTop:16,
     textAlign: "center",
     alignItems: "center",
   },
   headerButtonText: {
     fontSize: 16,
     fontWeight: "500",
-
+  
   },
   card: {
     width: 250,
-    margin: 15,
+   
     marginLeft: 0,
+    marginTop:15,
+    marginBottom:15,
+    marginRight:15,
     padding: 20,
     borderRadius: 20,
     justifyContent: "center",

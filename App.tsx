@@ -17,6 +17,8 @@ import PracticeQuiz from "./src/pages/PracticeQuiz";
 import Wrapper from "./src/components/Wrapper";
 import { Footer } from "./src/components/Footer";
 import DetailsVisa from "./src/pages/DetailsVisa";
+import LoginScreen from "./src/pages/LoginScreen";
+
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -32,6 +34,7 @@ const App = () => {
           <Stack.Screen name="Test" component={TestPraktik} />
           <Stack.Screen name="PracticeQuiz" component={PracticeQuiz} />
           <Stack.Screen name="DetailsVisa" component={DetailsVisa} />
+          <Stack.Screen name="LoginPage" component={LoginScreen} />
         </Stack.Navigator>
       </NavigationContainer>
   

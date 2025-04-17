@@ -1,6 +1,5 @@
 import React, { useState, useRef } from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity, Animated } from "react-native";
-import Wrapper from "./Wrapper";
 import { useNavigation } from "@react-navigation/native";
 
 const Header = () => {
@@ -24,6 +23,7 @@ const Header = () => {
 
         setMenuOpen(!menuOpen);
     };
+
     const rotate = rotateAnim.interpolate({
         inputRange: [0, 1],
         outputRange: ["0deg", "180deg"],
@@ -32,26 +32,27 @@ const Header = () => {
     return (
         <>
             <View style={styles.header}>
-            <TouchableOpacity onPress={toggleMenu}>
+                <TouchableOpacity onPress={toggleMenu}>
                     <Animated.Image
                         source={
                             menuOpen
-                                ? require("../assets/close.png") // Açıkken X
-                                : require("../assets/hamburger.jpg") // Kapalıyken Hamburger
+                                ? require("../assets/close.png")
+                                : require("../assets/hamburger.jpg")
                         }
                         style={[styles.hamburger, { transform: [{ rotate }] }]}
                     />
                 </TouchableOpacity>
-                <Text style={styles.title}>Sosialda Biz</Text>
+
+                <TouchableOpacity onPress={() => navigation.navigate("LoginPage")}>
+                    <Text style={styles.title}>Giriş Et</Text>
+                </TouchableOpacity>
+
                 <Image source={require("../assets/delogo1.png")} style={styles.logo} />
-
-
-        
             </View>
 
             {/* Menü İçeriği */}
             <Animated.View style={[styles.menu, { transform: [{ translateX }] }]}>
-                <TouchableOpacity onPress={()=>navigation.navigate("Home")}>
+                <TouchableOpacity onPress={() => navigation.navigate("Home")}>
                     <Text style={styles.menuItem}>Ana Səhifə</Text>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => navigation.navigate("Course")}>
@@ -78,8 +79,6 @@ const styles = StyleSheet.create({
         alignItems: "center",
         padding: 15,
         backgroundColor: "white",
-  
-  
     },
     logo: {
         width: 70,
@@ -92,13 +91,13 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 14,
         color: "black",
-        fontWeight:700,
+        fontWeight: "700",
         paddingLeft: 20,
         paddingTop: 10,
         paddingRight: 20,
         paddingBottom: 10,
         borderRadius: 20,
-        backgroundColor: "#F3F0FF"
+        backgroundColor: "#F3F0FF",
     },
     menu: {
         position: "absolute",
@@ -108,20 +107,20 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         backgroundColor: "#F3F0FF",
         padding: 20,
-        zIndex:99999999
+        zIndex: 99999999,
     },
     menuItem: {
         color: "black",
         fontSize: 14,
         marginVertical: 10,
         paddingLeft: 20,
-        width:150,
+        width: 150,
         paddingTop: 10,
         paddingRight: 20,
         paddingBottom: 10,
         borderRadius: 10,
-        backgroundColor: "white"
-    }
+        backgroundColor: "white",
+    },
 });
 
 export default Header;

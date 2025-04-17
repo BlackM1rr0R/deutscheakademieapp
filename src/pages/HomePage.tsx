@@ -5,6 +5,7 @@ import MainLayout from "./MainLayout";
 import HomeScreen from "../components/HomeScreen";
 import AboutComp from "../components/AboutComp";
 import TestGermany from "../components/TestGermany";
+import BooksGermany from "../components/BooksGermany";
 
 
 const HomePage = () => {
@@ -14,6 +15,7 @@ const HomePage = () => {
         <TestGermany/>
         <AboutComp />
         <HomeScreen />
+        <BooksGermany/>
       </ScrollView>
     </MainLayout>
   );
