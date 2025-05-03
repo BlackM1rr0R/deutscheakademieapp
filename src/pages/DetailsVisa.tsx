@@ -9,7 +9,7 @@ import {
   import { useRoute } from "@react-navigation/native";
   
   const DetailsVisa = () => {
-    const route = useRoute();
+    const route = useRoute<any>();
     const { item } = route.params;
   
     return (

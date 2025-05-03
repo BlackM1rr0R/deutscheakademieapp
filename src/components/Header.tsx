@@ -1,12 +1,35 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity, Animated } from "react-native";
-import { useNavigation } from "@react-navigation/native";
+import { NavigationProp, useNavigation } from "@react-navigation/native";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { RootStackParamList } from "../../types";
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
-    const navigation = useNavigation();
+    const [username, setUsername] = useState<string | null>(""); // Username durumunu ekle
+    const navigation = useNavigation<NavigationProp<RootStackParamList>>();
     const translateX = useRef(new Animated.Value(-500)).current;
     const rotateAnim = useRef(new Animated.Value(0)).current;
+
+    // Giriş yaptıysanız, username'i AsyncStorage'dan al
+    useEffect(() => {
+        const getUserData = async () => {
+            const token = await AsyncStorage.getItem("token");
+            if (token) {
+                // Token varsa, username al
+                const storedUsername = await AsyncStorage.getItem("username");
+                if (storedUsername) {
+                    setUsername(storedUsername); // Eğer username varsa, set et
+                } else {
+                    setUsername("Misafir"); // Eğer username yoksa, Misafir olarak göster
+                }
+            } else {
+                setUsername(""); // Eğer token yoksa, Misafir olarak göster
+            }
+        };
+
+        getUserData();
+    }, []);
 
     const toggleMenu = () => {
         Animated.timing(translateX, {
@@ -29,6 +52,18 @@ const Header = () => {
         outputRange: ["0deg", "180deg"],
     });
 
+    const handleLogout = async () => {
+        await AsyncStorage.removeItem("token");
+        await AsyncStorage.removeItem("username");
+        setUsername(null); // Çıkış yaptıktan sonra username'i temizle
+        navigation.navigate("LoginPage"); // Giriş sayfasına yönlendir
+        console.log("Cikis basarili" + "token silindi")
+    };
+    const aboutMe = async () => {
+        useEffect(() => {
+
+        })
+    }
     return (
         <>
             <View style={styles.header}>
@@ -43,9 +78,21 @@ const Header = () => {
                     />
                 </TouchableOpacity>
 
-                <TouchableOpacity onPress={() => navigation.navigate("LoginPage")}>
-                    <Text style={styles.title}>Giriş Et</Text>
-                </TouchableOpacity>
+                {username && username !== "" ? ( // Eğer giriş yapılmışsa username'i göster
+                    <View style={styles.userInfo}>
+                        <Text onPress={() => navigation.navigate("AboutMe")} style={styles.title}>
+                            {username}
+                        </Text>
+
+                        <TouchableOpacity onPress={handleLogout}>
+                            <Image style={{ width: 16, height: 16 }} source={require("../assets/exit.png")} />
+                        </TouchableOpacity>
+                    </View>
+                ) : (
+                    <TouchableOpacity onPress={() => navigation.navigate("LoginPage")}>
+                        <Text style={styles.title}>Giriş Et</Text>
+                    </TouchableOpacity>
+                )}
 
                 <Image source={require("../assets/delogo1.png")} style={styles.logo} />
             </View>
@@ -98,6 +145,24 @@ const styles = StyleSheet.create({
         paddingBottom: 10,
         borderRadius: 20,
         backgroundColor: "#F3F0FF",
+    },
+    logout: {
+        fontSize: 14,
+        color: "red",
+        paddingLeft: 20,
+        paddingTop: 10,
+        paddingRight: 20,
+        paddingBottom: 10,
+        borderRadius: 20,
+        backgroundColor: "#F3F0FF",
+    },
+    userInfo: {
+        flexDirection: "row",
+        alignItems: "center",
+        backgroundColor:"#F3F0FF",
+        borderRadius:20,
+        paddingLeft:20,
+        paddingRight:20
     },
     menu: {
         position: "absolute",

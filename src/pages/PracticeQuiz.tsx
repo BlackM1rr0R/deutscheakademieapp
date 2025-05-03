@@ -1,17 +1,20 @@
 import { useEffect, useState } from "react";
 import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Image } from "react-native";
 import { RouteProp, useNavigation, useRoute } from "@react-navigation/native";
-import { RootStackParamList } from "../types";
+
 import Header from "../components/Header";
 import quizData from '../assets/data/quizData.json'
+import { QuestionType } from "../../QuestionType";
+import { RootStackParamList } from "../../types";
 type QuizScreenRouteProp = RouteProp<RootStackParamList, "PracticeQuiz">;
 
 const PracticeQuiz = () => {
     const navigation = useNavigation();
     const route = useRoute<QuizScreenRouteProp>();
     const { level } = route.params;
+    
 
-    const [questions, setQuestions] = useState([]);
+    const [questions, setQuestions] = useState<QuestionType[]>([]);
     const [selectedAnswers, setSelectedAnswers] = useState<{ [key: number]: string }>({});
     const [showScore, setShowScore] = useState(false);
     useEffect(() => {

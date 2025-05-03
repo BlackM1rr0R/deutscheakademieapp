@@ -4,9 +4,18 @@ import VerifiedIcon from "../Icons";
 import Wrapper from "../components/Wrapper";
 import { useState } from "react";
 
-
+type CourseItem={
+    id: number;
+    title: string;
+    description: string;
+    duration: string;
+    textDesc: string;
+    textOnline: string;
+    textGroup: string;
+    price: string;
+}
 const Course = () => {
-    const data = [
+    const data: CourseItem[] = [
         {
             id: 1,
             title: "A1-A2 səviyyə",
@@ -43,7 +52,7 @@ const Course = () => {
         
 
     ]
-    const renderItem = ({ item }) => (
+    const renderItem = ({ item }: { item: CourseItem }) => (
         <Pressable
             style={({ pressed }) => [
                 styles.mapControl,

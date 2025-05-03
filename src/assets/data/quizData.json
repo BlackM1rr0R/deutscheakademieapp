@@ -3,8 +3,8 @@
       {
         "id": 1,
         "question": "Wie heißt du?",
-        "options": ["Ich heiße Ali.", "Ich bin 20 Jahre alt.", "Ich wohne in Berlin.", "Mir geht es gut."],
-        "correct": "Ich heiße Ali."
+        "options": ["Ich heiße Ramil.", "Ich bin 20 Jahre alt.", "Ich wohne in Berlin.", "Mir geht es gut."],
+        "correct": "Ich heiße Ramil."
       },
       {
         "id": 2,
